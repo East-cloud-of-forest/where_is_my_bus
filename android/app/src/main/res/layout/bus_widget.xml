@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+    📚 XML 강의 #2: 위젯 메인 레이아웃
+    
+    이 파일은 "위젯 전체"가 어떻게 생겼는지 정의합니다.
+    ListView를 사용하면 스크롤 가능한 목록을 만들 수 있습니다.
+-->
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:padding="8dp"
+  android:background="#F3F4F6">
+  <!-- 헤더 섹션 -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="8dp">
+    <!-- 제목 + 버튼들 -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:gravity="center_vertical">
+      <!-- 제목 -->
+      <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="🚌 내 버스 언제 와?"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#1F2937" />
+
+      <!-- 새로고침 버튼 -->
+      <Button
+        android:id="@+id/refresh_button"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:text="🔄"
+        android:textSize="14sp"
+        android:background="@android:color/transparent"
+        android:padding="0dp" />
+
+      <!-- 설정 버튼 -->
+      <Button
+        android:id="@+id/settings_button"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:text="⚙️"
+        android:textSize="14sp"
+        android:background="@android:color/transparent"
+        android:padding="0dp"
+        android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+    <!-- 마지막 업데이트 시간 -->
+    <TextView
+      android:id="@+id/last_update_time"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="마지막 업데이트: --:--"
+      android:textSize="11sp"
+      android:textColor="#6B7280"
+      android:paddingTop="4dp" />
+  </LinearLayout>
+
+  <!-- 스크롤 가능한 버스 목록 -->
+  <ListView
+    android:id="@+id/bus_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+</LinearLayout>

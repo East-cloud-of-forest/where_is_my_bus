@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+    📚 XML 강의 #1: 리스트 아이템 레이아웃
+    
+    이 파일은 "버스 목록의 한 줄"이 어떻게 생겼는지 정의합니다.
+    (React Native의 컴포넌트 JSX와 비슷한 역할)
+-->
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="horizontal"
+  android:padding="12dp"
+  android:background="#FFFFFF">
+  <!-- 버스 번호 (왼쪽) -->
+  <TextView
+    android:id="@+id/bus_number"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:text="1001번"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    android:textColor="#2563EB" />
+
+  <!-- 도착 시간 (중앙) -->
+  <TextView
+    android:id="@+id/arrival_time"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:text="3분 후"
+    android:textSize="14sp"
+    android:textColor="#DC2626"
+    android:gravity="center" />
+
+  <!-- 남은 정류장 (오른쪽) -->
+  <TextView
+    android:id="@+id/remaining_stops"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:text="2정거장"
+    android:textSize="12sp"
+    android:textColor="#6B7280"
+    android:gravity="end" />
+</LinearLayout>
